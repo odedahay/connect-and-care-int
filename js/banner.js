@@ -56,6 +56,6 @@ document.querySelectorAll('.dot-navigation').forEach(function (elem) {
 
 
 // automatic slideshow
-setInterval(function(){
-    showSlides(++SLIDEINDEX)
-}, 10000);
+// setInterval(function(){
+//     showSlides(++SLIDEINDEX)
+// }, 10000);

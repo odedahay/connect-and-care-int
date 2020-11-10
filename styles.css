@@ -5,39 +5,40 @@
 /* background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 80%,rgba(0,0,0,0.4) 100%);  W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
 :root {
-    --primary-color: #2A22A9;
-    --secondary-color: #DE1432;
-    --dark-color: #002240;
-    --light-color: #EBEBEB;
-    --success-color: #5cb85c;
-    --error-color: #d9534f;
-  }
+  --primary-color: #2A22A9;
+  --secondary-color: #DE1432;
+  --dark-color: #002240;
+  --light-color: #EBEBEB;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+}
   
-  *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    user-select: none; /* prevent items to be selected */
-  }
-  html {
-    scroll-behavior: smooth;
-  }
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* user-select: none;  */
+  /* prevent items to be selected */
+}
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    -webkit-text-size-adjust: 100%;
-  }
+body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
 
-  ul {
-    list-style-type: none;
-  }
+ul {
+  list-style-type: none;
+}
 
-  a {
-    text-decoration: none;
-    color: #333;
-  }
+a {
+  text-decoration: none;
+  color: #333;
+}
 
 h1,
 h2 {
@@ -145,8 +146,14 @@ pre {
 /* classes to center elements */
 .center_x{
   position: relative;
-  /* left: 50%;
-  transform:translateX(-50%); */
+  left: 50%;
+  transform:translateX(-50%);
+}
+
+.center_x_text{
+  position: relative;
+  left: 15%;
+  transform:translateX(-50%);
 }
 
 .center_y{
@@ -154,6 +161,14 @@ pre {
   top: 40%;
   transform:translateY(-40%);
 }
+
+.center_y_text{
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+}
+
+
 
 /* set slider container full screen */
 #slider-container{
@@ -181,7 +196,7 @@ pre {
 
 .slide:after {
   content: "";
-  background-color: rgba(42,34,169,.4);
+  background-color: rgba(42,34,169,.2);
   position: absolute;
   top: 0;
   right: 0;
@@ -248,31 +263,45 @@ pre {
 }
 
 .banner-text{
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  transform: translateY(-50%); 
+  transform: translateY(-50%); */
+  /* position: relative;
+  top:-30%; */
+  /* 
+  left: 50%;
+  transform: translate(-100%, -50%); */
+  z-index: 10;
 }
 
+
 .banner-text__item{
-  position: relative;
+  /* position: absolute;
+  top:50%;
   left: 40%;
-  transform: translateX(0%);
-  z-index: 10;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+
+  color: #fff; */
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
   color: #fff;
 }
 
 .banner-text__item h2{
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
-  font-size: 3rem;
+  font-size: 2.6em;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 3rem;
   text-shadow: 1px 1px 1px #ddd;
 }
 
 .banner-text__item h3{
   font-family: 'Lato', sans-serif;
-  font-size: 1.70rem;
+  font-size: 1.50rem;
   font-weight: 300;
 }
 
@@ -288,8 +317,6 @@ pre {
   0%  {opacity: .8} 
   100% {opacity: 1}
 }
-
-
 
 /* ==================== Programs ==================== */
 .program-offered__title{
@@ -363,7 +390,6 @@ pre {
   font-family: 'Lato', sans-serif;
   line-height: 1.8rem;
   font-size: 1.1rem;
-  height: 180px;
 
 }
 
@@ -392,7 +418,8 @@ pre {
 
 /* ==================== Sub FAQ ==================== */
 .home-faq__card{
-  padding: 6rem 3rem;
+  padding: 3rem 3rem;
+  min-height: 310px;
 }
 
 .home-faq__red-card{
@@ -415,15 +442,42 @@ pre {
 .home-faq__title{
   font-size: 1.75rem;
   color:#fff;
-  line-height: 1.2rem;
+  line-height: 2rem;
   padding-bottom: 16px;
+  font-weight: 400;
 }
 
 .home-faq__subtitle{
+  font-weight: 300;
   font-size: 18px;
   color:#fff;
 }
 
+a.home-faq-btn{
+  font-size: .9rem;
+  padding: 6px 9px 6px 0px;
+  transition: .3s;
+  color: #fff;
+}
+a.home-faq-btn:hover{
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 3px;
+  padding: 6px 9px 6px 9px;
+}
+
+a.home-faq-btn-red{
+  font-size: .9rem;
+  padding: 6px 9px 6px 0px;
+  transition: .3s;
+  color: #fff;
+}
+a.home-faq-btn-red:hover{
+  color: #fff;
+  background: var(--secondary-color);
+  border-radius: 3px;
+  padding: 6px 9px 6px 9px;
+}
 /* ==================== Testimonials ==================== */
 
 .testimonial-heading {
@@ -581,7 +635,7 @@ pre {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  border: 1px solid #d6d6d6;
+  border: 3px solid #d6d6d6;
 }
 
 .testimonials-main__person-name{
@@ -602,6 +656,47 @@ pre {
 .testimonials-main__person-name .address{
   font-size: .90rem;
   font-style: italic;
+}
+
+
+.news-main .grid{
+  position: relative;
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+/* Only stick if you can fit */
+.sidemenu-sidebar h3{
+  font-size: 1.85rem;
+  font-weight: 300;
+}
+
+.sidemenu-sidebar li{
+  line-height: 1.25rem;
+  margin-bottom: .5rem;
+}
+
+.sidemenu-sidebar li a{
+  padding: 10px 5px;
+  color:#333;
+  display: block;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  transition: .2s;
+  line-height: 1.55rem;
+}
+
+a.news-gal-btn{
+  font-size: .9rem;
+  padding: 6px 9px 6px 0px;
+  transition: .3s;
+  color: #333;
+}
+a.news-gal-btn:hover{
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 3px;
+  padding: 6px 9px 6px 9px;
 }
 
 /* ==================== Partners ==================== */
@@ -935,8 +1030,6 @@ pre {
   position: relative;
   width: 90%; 
   height: 100%;
-  /* height: 350px;
-  */
   padding: 40px;
   z-index: 11;
   justify-self: flex-end;
@@ -974,11 +1067,37 @@ textarea {
   outline: none;
 }
 
-
+.break{
+  display: block;
+}
 
 /* ==================== Tablets and Mobile Screens ==================== */
 @media (max-width:768px){
 
+  .news-main .grid{
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+
+  .contact-main .grid{
+    position: relative;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+  
+
+  .break{
+    display: inline-block;
+  }
+
+  .center_x_text{
+    left: 10%;
+  }
+
+  .home-faq__card{
+    padding: 3rem 3rem;
+    /* min-height: 310px; */
+  }
   .testimonials-main .grid{
     grid-template-columns:1fr;
   }
@@ -1041,10 +1160,12 @@ textarea {
     font-size: 1.6rem;
   }
 
+  #arrow-wrapper{display: none;}
+
   .banner-text__item{
     text-align: center;
-    transform: translateX(-30%);
-    padding: 0 20px;
+    /* transform: translateX(0%); */
+    padding: 0 0px;
   }
   .banner-text__item h2{
     text-align: center;
@@ -1122,6 +1243,8 @@ textarea {
     word-break: normal;
     width: auto;
   }
+ 
+
 
 }
 
@@ -1133,6 +1256,7 @@ textarea {
     margin: 2rem 0;
   }
 
+ 
   .banner-text__item{
     text-align: center;
     transform: translateX(-40%);

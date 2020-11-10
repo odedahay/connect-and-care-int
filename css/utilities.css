@@ -36,6 +36,11 @@
     color: #fff;
 }
 
+
+.blue-font{
+    color: var(--primary-color);
+}
+
 blockquote {
 font-family: Georgia, serif;
 font-size: 1.3em;
@@ -46,16 +51,26 @@ quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote:before {
 color: #333;
-content: open-quote;
+content: '\201C';
+font-family: Georgia, serif;
 font-size: 6em;
 line-height: 0.1em;
 margin-right: 0.15em;
 vertical-align: -0.4em;
 }
+
+blockquote:after {
+    color: #333;
+    content: '\201D';
+    font-family: Georgia, serif;
+    font-size: 5em;
+    line-height: 0.1em;
+    margin-left: 0.15em;
+    vertical-align: -0.6em;
+  }
 blockquote p {
 display: inline;
 }
-
 
     
 .flex {
@@ -220,6 +235,11 @@ color:var(--secondary-color)
   
 .lg-title{
     font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.md-title{
+    font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
