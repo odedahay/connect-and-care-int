@@ -12,7 +12,7 @@
   --success-color: #5cb85c;
   --error-color: #d9534f;
 }
-  
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -116,10 +116,10 @@ pre {
 }
 
 .primary-nav li a.contact-btn:after{
-  content: none; 
+  content: none;
 }
 
-.contact-btn{ 
+.contact-btn{
   padding: 5px 30px;
   border: 2px solid var(--secondary-color);
   border-radius: 50px;
@@ -136,7 +136,7 @@ pre {
   border: 2px solid var(--secondary-color);
   background-color: var(--secondary-color);
   color: #fff;
-} 
+}
 
 
 .primary-nav li a.active:after{
@@ -175,9 +175,9 @@ pre {
   height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   /* remove unwanted scroll bar */
- 
+
 }
 
 /* set the slides full screen */
@@ -228,13 +228,13 @@ pre {
 
 /* use position absolute to move the next arrow to the right of the screen*/
 #arrow-next{
-  position: absolute; 
+  position: absolute;
   right: 20px;
 }
 
 
 #dots-wrapper{
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   bottom: 30px;
@@ -268,7 +268,7 @@ pre {
   transform: translateY(-50%); */
   /* position: relative;
   top:-30%; */
-  /* 
+  /*
   left: 50%;
   transform: translate(-100%, -50%); */
   z-index: 10;
@@ -314,16 +314,17 @@ pre {
 }
 
 @keyframes fade {
-  0%  {opacity: .8} 
+  0%  {opacity: .8}
   100% {opacity: 1}
 }
 
 /* ==================== Programs ==================== */
+
 .program-offered__title{
   position:relative;
   font-family: 'Roboto', sans-serif;
   font-size: 5.5rem;
-  
+
   color: var(--secondary-color);
   font-weight: 400;
   line-height: 95px;
@@ -525,7 +526,7 @@ a.home-faq-btn-red:hover{
   border: 3px solid #fff;
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -16px;
   right: 0;
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
@@ -534,7 +535,9 @@ a.home-faq-btn-red:hover{
   line-height: 35px;
   font-size: 0.8rem;
 }
-
+.owl-carousel .owl-item img{
+  border: 3px solid var(--light-color);
+}
 .owl-carousel .owl-dots {
   margin-top: 0 !important;
 }
@@ -677,32 +680,21 @@ a.home-faq-btn-red:hover{
 }
 
 .sidemenu-sidebar li a{
-  padding: 10px 5px;
+  padding: 5px 5px;
   color:#333;
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 2px;
   transition: .2s;
-  line-height: 1.55rem;
+  line-height: 1.25rem;
 }
 
-a.news-gal-btn{
-  font-size: .9rem;
-  padding: 6px 9px 6px 0px;
-  transition: .3s;
-  color: #333;
-}
-a.news-gal-btn:hover{
-  color: #fff;
-  background: var(--primary-color);
-  border-radius: 3px;
-  padding: 6px 9px 6px 9px;
-}
+
 
 /* ==================== Partners ==================== */
 .partner-section{
   position: relative;
-  
+
 }
 .partner-section:before{
   content: '';
@@ -738,6 +730,28 @@ a.news-gal-btn:hover{
 }
 
 /* ==================== programs Style ==================== */
+.programs-main .wrapper-md{
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.programs-main__list{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+
+}
+.programs-main__list li{
+  margin-left: 1rem;
+  list-style-image:url(images/icons/check-solid.svg);
+}
+
 .programs-main .grid{
   position: relative;
   grid-template-columns: 1fr 2fr;
@@ -756,7 +770,6 @@ a.news-gal-btn:hover{
   padding: 5px 10px;
   color:#fff;
 }
-
 
 .programme-table__item.a-level h3{
   background: var(--primary-color);
@@ -777,12 +790,12 @@ a.news-gal-btn:hover{
 .programme-table__item ul li{
   list-style: circle;
   padding-bottom: 15px;
-  
+
 }
 
 .banner-block{
   position: relative;
-  background-size: 100%; 
+  background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
   height: 380px;
@@ -790,7 +803,7 @@ a.news-gal-btn:hover{
 }
 
 .banner-block-text h1{
-  text-shadow: 1px 1px 1px #333; 
+  text-shadow: 1px 1px 1px #333;
 }
 
 .banner-block-text{
@@ -800,9 +813,7 @@ a.news-gal-btn:hover{
   height: 100%;
 }
 .sticky-sidebar{
-  /* position: relative; */
-
-}
+/* position: relative; */}
 
 .sticky-card-fixed{
   position: fixed;
@@ -830,36 +841,37 @@ a.news-gal-btn:hover{
 
 .sticky-sidebar li a i.class-level{
   font-style: normal;
-  margin-right: 15px; 
+  margin-right: 15px;
   color:#fff;
 }
 
 .sticky-sidebar li a.a-level{
-  background: linear-gradient(100deg, var(--primary-color) 15%, #EBEBEB 15%);
-  
+  background: linear-gradient(100deg, var(--secondary-color) 15%, #EBEBEB 15%);
+
 }
 .sticky-sidebar li a.b-level{
-  background: linear-gradient(100deg, var(--secondary-color) 15%, #EBEBEB 15%);
+  background: linear-gradient(100deg, var(--primary-color) 15%, #EBEBEB 15%);
 }
 
 
 .sticky-sidebar li a.a-level:hover{
-  background: linear-gradient(100deg, var(--primary-color) 15%, #3e33e6 15%);
+  background: linear-gradient(100deg, var(--secondary-color) 15%, #3e33e6 15%);
   color: #fff;
 }
 .sticky-sidebar li a.b-level:hover{
-  background: linear-gradient(100deg, var(--secondary-color) 15%, #3e33e6 15%);
+  background: linear-gradient(100deg, var(--primary-color) 15%, #3e33e6 15%);
   color: #fff;
 }
 
 .sticky-sidebar li a.a-level.active{
-  background: linear-gradient(100deg, var(--primary-color) 15%, #3e33e6 15%);
-  color: #fff;
-}
-.sticky-sidebar li a.b-level.active{
   background: linear-gradient(100deg, var(--secondary-color) 15%, #3e33e6 15%);
   color: #fff;
 }
+.sticky-sidebar li a.b-level.active{
+  background: linear-gradient(100deg, var(--primary-color) 15%, #3e33e6 15%);
+  color: #fff;
+}
+
 
 /* ==================== Footer ==================== */
 .footer{
@@ -912,7 +924,7 @@ a.news-gal-btn:hover{
 }
 
 /* ==================== FAQ Styles ==================== */
-  
+
   .fck-2{
     padding:10px 0px
   }
@@ -949,13 +961,13 @@ a.news-gal-btn:hover{
     padding-right: 15px;
     line-height: 1.6rem;
     color: #333;
-        
+
 }
 
 .active-display h2{
     color: var(--primary-color);
 }
-   
+
   .accordion-button:after {
         content: '\002B'; /*color: #a69065; Unicode character for "plus" sign (+) */
         color: #333;
@@ -972,7 +984,7 @@ a.news-gal-btn:hover{
         color: var(--primary-color);
   }
 
-  
+
   .accordion-wrapper {
       padding: 0;
       background-color: white;
@@ -992,16 +1004,16 @@ a.news-gal-btn:hover{
       margin: 0 0 10px;
       list-style: circle;
   }
-  
+
   .accordion-container ul ul{
     padding-top:20px;
   }
-  
+
   .accordion-container ul li:last-child { padding-bottom:0px;}
   .accordion-container ul li ul{
       padding-bottom:0px;
   }
-  
+
   .accordion-container a{
       color:var(--primary-color);
       word-break: normal;
@@ -1028,7 +1040,7 @@ a.news-gal-btn:hover{
 
 .contact-main__wrapper{
   position: relative;
-  width: 90%; 
+  width: 90%;
   height: 100%;
   padding: 40px;
   z-index: 11;
@@ -1036,10 +1048,11 @@ a.news-gal-btn:hover{
 }
 
 .contact-main__form .form-control {
-  margin: 30px 0;
+  margin: 0px 0 15px 0;
 }
 
-
+.contact-main__form input[type='subje'],
+.contact-main__form input[type='tel'],
 .contact-main__form input[type='text'],
 .contact-main__form input[type='email']{
   border: 0;
@@ -1049,14 +1062,28 @@ a.news-gal-btn:hover{
   font-size: 16px;
   background-color: #eee;
 }
+
+.contact-main__form input[placeholder],
+.contact-main__form textarea[placeholder]{
+  font-size: .95rem;
+  font-weight: 300;
+}
 .contact-main__form textarea{
   border: 0;
   border: 1px solid var(--light-color);
   width: 100%;
   padding: 10px;
-  font-size: 16px;
   background-color: #eee;
-} 
+}
+
+.label-style{
+  padding-left: 5px;
+  padding-bottom: 5px;
+  display: block;
+  color: var(--primary-color);
+  font-size: .85rem;
+  font-weight: 400;
+}
 
 textarea {
   height: 180px;
@@ -1069,6 +1096,22 @@ textarea {
 
 .break{
   display: block;
+}
+.text-success{
+  display: block;
+  margin-top: 20px;
+  background-color: seagreen;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  color: #fff;
+}
+.text-danger{
+  display: block;
+  margin-top: 20px;
+  font-size: 1.25rem;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  color: #fff;
 }
 
 /* ==================== Tablets and Mobile Screens ==================== */
@@ -1084,7 +1127,7 @@ textarea {
     grid-template-columns: 1fr;
     align-items: flex-start;
   }
-  
+
 
   .break{
     display: inline-block;
@@ -1119,7 +1162,7 @@ textarea {
     justify-self: center;
     margin: auto;
   }
-  
+
 
   .primary-nav{
     margin-top: 30px;
@@ -1133,7 +1176,7 @@ textarea {
     position: absolute;
     right: 20px;
     top: 10px;
-    
+
   }
 
   .site-header__main-nav .fas{
@@ -1193,7 +1236,7 @@ textarea {
     width: 100%;
     height: 9px;
     margin-top: -22px;
-    margin-left: 0%;  
+    margin-left: 0%;
     border-top: 1px solid #EBEBEB;
   }
 
@@ -1243,7 +1286,7 @@ textarea {
     word-break: normal;
     width: auto;
   }
- 
+
 
 
 }
@@ -1256,7 +1299,7 @@ textarea {
     margin: 2rem 0;
   }
 
- 
+
   .banner-text__item{
     text-align: center;
     transform: translateX(-7%);
@@ -1322,7 +1365,7 @@ textarea {
     margin: 20px 0px 20px;
   }
 
-  
+
 
   .footer .grid{
     display: block;
@@ -1340,7 +1383,7 @@ textarea {
   .footer_item li a {
 
     font-weight: 300;
-   
+
   }
   .address p{
     font-size: 1.15rem;

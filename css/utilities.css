@@ -145,6 +145,20 @@ display: inline;
     transform: scale(0.98);
   }
 
+  a.btn-sm-gallery{
+    font-size: .9rem;
+    padding: 8px 10px;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    transition: .3s;
+    color: #333;
+  }
+  a.btn-sm-gallery:hover{
+    color: #fff;
+    background: var(--primary-color);
+    padding: 8px 15px;
+  }
+
 
 .bg-gray,
 .btn-gray {
@@ -185,7 +199,22 @@ display: inline;
   color: #fff;
 }
  
+.color-box{
+  padding: 5px 20px 5px 8px;
+  background: linear-gradient(100deg, var(--primary-color) 75%, transparent 25%);
+  margin-right: -5px;
+  color: #fff;
+}
 
+.red-box{
+  background: linear-gradient(100deg, var(--secondary-color) 75%, transparent 25%);
+}
+
+.hours-box{
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 0 0 1.8rem;
+}
 /* Text colors */
 
 .generic-content-container p {
@@ -193,15 +222,6 @@ display: inline;
     line-height: 1.65;
     margin: 0 0 1.8rem;
 }
-
-/* h2.a-level{
-font-weight: 400;
-color:var(--secondary-color)
-}
-h2.b-level{
-font-weight: 400;
-color:var(--secondary-color)
-} */
 
 .text-primary {
     color: var(--primary-color);
@@ -217,6 +237,13 @@ color:var(--secondary-color)
   
   .text-light {
     color: var(--light-color);
+  }
+  
+  a.link{
+    color: var(--primary-color);
+  }
+  a.link:hover{
+    color: var(--secondary-color);
   }
   
 
@@ -289,11 +316,11 @@ color:var(--secondary-color)
     left:0%;
   }
 
-  .sub-title__hour{
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 1.3rem;
-  }
+.sub-title__hour{
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.3rem;
+}
 
   ol.faq-number{
     list-style-type: decimal;

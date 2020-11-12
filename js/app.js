@@ -37,18 +37,17 @@ function stickySideBar(){
         sideNav.classList.remove('sticky-card-fixed');
     }
  }
- 
- navigationLink.forEach(menu => {
-    menu.addEventListener('click', activatLink);
- })
+
+ // Active Link
+ //navigationLink.forEach(menu => {menu.addEventListener('click', activatLink);})
 
  // Program scroll - activate the btn
-window.addEventListener('scroll', revealLink);
+//window.addEventListener('scroll', revealLink);
 
 function activatLink(menu){
     const btnTarget = menu.currentTarget;
     //const level = btnTarget.dataset.level;
- 
+
     // navigationLink.forEach(menulink => {
     //     menulink.classList.remove("active")
     // });
@@ -77,14 +76,14 @@ function activatLink(menu){
 
  // FAQ Section
  var accordion = document.querySelectorAll('.accordion-button');
-         
+
     for ( var i = 0; i < accordion.length; i++){
         accordion[i].addEventListener('click', function(){
 
             this.classList.toggle("active-display");
 
             var panel = this.nextElementSibling;
-            
+
             if(panel.style.maxHeight){
 
                 panel.style.maxHeight = null;
@@ -95,3 +94,7 @@ function activatLink(menu){
     }
 
 });
+
+// Footer Date
+const date = new Date();
+document.querySelector('.year').innerHTML = date.getFullYear();

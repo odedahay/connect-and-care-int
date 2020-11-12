@@ -3,16 +3,22 @@
     if (isset($_POST['submit'])) {
         
         $from = $_POST['email'];
-        $to = 'yahoo.com';
-        $subject = 'Email Message';
-        $body = 'Please sign me up to the mailing list';
-        
+        $to = 'media@cnc-international.com';
+        $name = $_POST['name'];
+        $phoneNum = $_POST['phone'];
+        $message = $_POST['message'];
+
+        $subject = 'Website enquiry';
+        $mailheader = "From: $from \r\n";
+
+        $formcontent= "From: $name \n Contact No.: $phoneNum \n Email Address: $from \n\n Message: $message";
+
         if (!$_POST['email']) {
             $emailError = '<div class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> &nbsp;Please enter a valid email address</div>';
         }
         
         if (!$emailError) {
-            if (mail ($to, $subject, $body, $from)) {
+            if (mail ($to, $subject, $formcontent, $mailheader)) {
                 $result = '<div class="text-success"><i class="fa fa-check" aria-hidden="true"></i> &nbsp;thank you we\'ll keep you updated</div>';
             } else {
                 $result = '<div class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> &nbsp;sorry there has been an error, please try again</div>';
@@ -20,8 +26,8 @@
         }
         
     }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en"> 
@@ -48,9 +54,7 @@
    
 </head>
 <body>
-    <!-- pre loader-->
-    <!-- end pre loader-->
-    <!-- header -->
+
     <header class="site-header">
         <div class="wrapper">
             <div class="site-header__main-nav flex">
@@ -102,15 +106,14 @@
                 </div>
                 <div class="contact-main__form" id="email">
                     <!-- <h2>Request a Demo</h2> -->
-                    <form name="contact" method="POST" role="form" action="#email">
-                        
+                    <form name="contact" method="POST" role="form" action="#email">    
                         <div class="form-control">
                             <label class="label-style">Name:</label>
                             <input type="text" name="name" placeholder="Full Name" required>
                         </div>
                         <div class="form-control">
                             <label class="label-style">Mobile Number: </label>
-                            <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                            <input type="tel" name="phone" placeholder="(+63) 9164047893" required>
                         </div>
                         <div class="form-control">
                             <label class="label-style">Email Address:</label>
@@ -122,10 +125,13 @@
                         </div> -->
                         
                         <div class="form-control">
-                            <textarea placeholder="How can we help?"></textarea>
+                            <textarea placeholder="How can we help?" name="message"></textarea>
                         </div>
-                        <input type="submit" value="Send" class="btn btn-primary">
+                        <!-- <input type="submit" value="Send" class="btn btn-primary"> -->
+                        <button type="submit" class="btn btn-primary" name="submit" value="send">Submit</button>
                     </form>
+                    <?php echo $emailError;?>
+                    <?php echo $result;?>
                 </div>
              
                 
